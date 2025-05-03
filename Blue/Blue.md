@@ -1,10 +1,10 @@
-# [Room Name / Challenge Title]
+# [Blue]
 
 ## Basic Info
-- **Platform**: TryHackMe / HTB / Other
-- **IP Address**: 
-- **Date**: 
-- **Difficulty**: 
+- **Platform**: TryHackMe
+- **IP Address**: 10.10.241.158
+- **Date**: 05/03/2025
+- **Difficulty**: Easy
 - **Tags**: Enumeration, Exploitation, Privilege Escalation
 
 ---
@@ -14,14 +14,51 @@
 ### Nmap
 **Command:**
 ```bash
-nmap -sC -sV -oN nmap.txt <IP>
+nmap -sVC -T4 -p- --open 10.10.241.158 -oN blue.nmap
 ```
 
 **Result Summary:**
+
 ```
-Port     Service      Version
-22/tcp   ssh          OpenSSH 7.6p1
-80/tcp   http         Apache 2.4.29
+PORT      STATE SERVICE            VERSION
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=Jon-PC
+| Not valid before: 2025-05-02T14:26:05
+|_Not valid after:  2025-11-01T14:26:05
+|_ssl-date: 2025-05-03T15:50:43+00:00; -1s from scanner time.
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49158/tcp open  msrpc              Microsoft Windows RPC
+49159/tcp open  msrpc              Microsoft Windows RPC
+Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 02:50:17:50:99:b1 (unknown)
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 1h14m59s, deviation: 2h30m00s, median: -1s
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: Jon-PC
+|   NetBIOS computer name: JON-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2025-05-03T10:50:37-05:00
+| smb2-time: 
+|   date: 2025-05-03T15:50:37
+|_  start_date: 2025-05-03T14:26:04
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+
 ```
 
 ---
@@ -29,9 +66,9 @@ Port     Service      Version
 ## Service Analysis
 
 ### Port 80 - HTTP
-- **What’s running:** 
+- **What’s running:** Microsoft Windows RPC
 - **Interesting files/directories:** 
-- **Vulnerabilities identified:**
+- **Vulnerabilities identified:** ms17-010
 
 ---
 
