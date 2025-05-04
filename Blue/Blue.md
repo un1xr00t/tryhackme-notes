@@ -1,4 +1,4 @@
-# [Blue]Test
+# [Blue]
 
 ## Basic Info
 - **Platform**: TryHackMe
