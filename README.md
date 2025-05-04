@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/4d83bdf8-48ad-4ec6-b7cb-dc142bbb4c2e)
+
+
 # tryhackme-notes
 
 Welcome to my personal repository of TryHackMe notes. This collection is meant to help me track my learning progress, reinforce knowledge, and serve as a quick reference for challenges and rooms I've completed.
