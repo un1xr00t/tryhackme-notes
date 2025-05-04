@@ -15,16 +15,12 @@ I use tools like `nmap`, `enum4linux`, `hydra`, and `metasploit`. You'll find sn
 
 ## 📌 Goals
 
-- [x] Create a central place for all TryHackMe notes  
-- [x] Include detailed scan results like `.nmap` outputs  
-- [x] Organize rooms into individual folders  
-- [x] Add markdown templates for consistency  
-- [x] Make a dark, hacker-themed banner for the repo  
-- [x] Enhance the main `README.md` to look clean and professional  
-
-
-Let me know if you want to add any stretch goals or automate anything next!
-
+- [x] Provide clear and concise walkthroughs for TryHackMe rooms.  
+- [x] Include commonly used commands and tools with examples.  
+- [x] Help beginners understand enumeration, exploitation, and privilege escalation techniques.  
+- [x] Serve as a quick reference during CTFs or revisiting concepts.  
+- [x] Maintain a clean, consistent format across all notes.  
+- [x] Share knowledge in a way that's easy to expand and contribute to.
 
 ---
 
