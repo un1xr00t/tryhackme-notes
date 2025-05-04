@@ -95,3 +95,10 @@ sudo -l
 rm /tmp/<filename>
 unset HISTFILE
 ```
+
+
+## Summary/Understanding of what I've learned in this room
+-
+-
+-
+--------
