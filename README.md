@@ -15,9 +15,16 @@ I use tools like `nmap`, `enum4linux`, `hydra`, and `metasploit`. You'll find sn
 
 ## 📌 Goals
 
-- [x] Maintain clean notes per room
-- [x] Include scan results like `.nmap` files
-- [ ] Automate template creation with a script
+- [x] Create a central place for all TryHackMe notes  
+- [x] Include detailed scan results like `.nmap` outputs  
+- [x] Organize rooms into individual folders  
+- [x] Add markdown templates for consistency  
+- [x] Make a dark, hacker-themed banner for the repo  
+- [x] Enhance the main `README.md` to look clean and professional  
+
+
+Let me know if you want to add any stretch goals or automate anything next!
+
 
 ---
 
