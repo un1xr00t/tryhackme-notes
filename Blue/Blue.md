@@ -2,7 +2,7 @@
 
 ## Basic Info
 - **Platform**: TryHackMe
-- **IP Address**: 10.10.135.200
+- **IP Address**: 10.10.92.152
 - **Date**: 05/03/2025
 - **Difficulty**: Easy
 - **Tags**: Enumeration, Exploitation, Privilege Escalation
@@ -132,9 +132,3 @@ sudo -l
 rm /tmp/<filename>
 unset HISTFILE
 ```
-
-## Summary/Understanding of what I've learned in this room
--
--
--
---------
