@@ -2,7 +2,7 @@
 
 ## Basic Info
 - **Platform**: TryHackMe
-- **IP Address**: 10.10.241.158
+- **IP Address**: 10.10.135.200
 - **Date**: 05/03/2025
 - **Difficulty**: Easy
 - **Tags**: Enumeration, Exploitation, Privilege Escalation
@@ -75,8 +75,8 @@ Host script results:
 ## Exploitation
 
 ### Method Used:
-- Vulnerability:
-- Exploit Used:
+- Vulnerability: ms17-010
+- Exploit Used: exploit/windows/smb/ms17_010_eternalblue AKA eternalblue
 - Shell Access Gained:
 
 **Commands:**
@@ -132,3 +132,9 @@ sudo -l
 rm /tmp/<filename>
 unset HISTFILE
 ```
+
+## Summary/Understanding of what I've learned in this room
+-
+-
+-
+--------

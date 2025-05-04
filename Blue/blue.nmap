@@ -1,17 +1,17 @@
-# Nmap 7.94SVN scan initiated Sat May  3 11:48:27 2025 as: nmap -sVC -T4 -p- --open -oN blue.nmap 10.10.241.158
-Nmap scan report for 10.10.241.158
-Host is up (0.21s latency).
-Not shown: 65313 closed tcp ports (conn-refused), 213 filtered tcp ports (no-response)
+# Nmap 7.94SVN scan initiated Sun May  4 12:54:48 2025 as: nmap -sVC -T4 -p- --open -oN blue.nmap 10.10.92.152
+Nmap scan report for 10.10.92.152
+Host is up (0.24s latency).
+Not shown: 63752 closed tcp ports (conn-refused), 1774 filtered tcp ports (no-response)
 Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
 PORT      STATE SERVICE            VERSION
 135/tcp   open  msrpc              Microsoft Windows RPC
 139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
 445/tcp   open  microsoft-ds       Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
 3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2025-05-04T16:57:06+00:00; -1m10s from scanner time.
 | ssl-cert: Subject: commonName=Jon-PC
-| Not valid before: 2025-05-02T14:26:05
-|_Not valid after:  2025-11-01T14:26:05
-|_ssl-date: 2025-05-03T15:50:43+00:00; -1s from scanner time.
+| Not valid before: 2025-05-03T16:48:07
+|_Not valid after:  2025-11-02T16:48:07
 49152/tcp open  msrpc              Microsoft Windows RPC
 49153/tcp open  msrpc              Microsoft Windows RPC
 49154/tcp open  msrpc              Microsoft Windows RPC
@@ -20,26 +20,21 @@ PORT      STATE SERVICE            VERSION
 Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
-|_nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 02:50:17:50:99:b1 (unknown)
-| smb2-security-mode: 
-|   2:1:0: 
-|_    Message signing enabled but not required
-|_clock-skew: mean: 1h14m59s, deviation: 2h30m00s, median: -1s
 | smb-os-discovery: 
 |   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
 |   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
 |   Computer name: Jon-PC
 |   NetBIOS computer name: JON-PC\x00
 |   Workgroup: WORKGROUP\x00
-|_  System time: 2025-05-03T10:50:37-05:00
+|_  System time: 2025-05-04T11:57:02-05:00
 | smb2-time: 
-|   date: 2025-05-03T15:50:37
-|_  start_date: 2025-05-03T14:26:04
-| smb-security-mode: 
-|   account_used: guest
-|   authentication_level: user
-|   challenge_response: supported
-|_  message_signing: disabled (dangerous, but default)
+|   date: 2025-05-04T16:57:02
+|_  start_date: 2025-05-04T16:48:05
+|_nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 02:7c:de:8d:2b:0f (unknown)
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 1h38m53s, deviation: 2h53m14s, median: -1m05s
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May  3 11:50:45 2025 -- 1 IP address (1 host up) scanned in 138.17 seconds
+# Nmap done at Sun May  4 12:58:17 2025 -- 1 IP address (1 host up) scanned in 209.11 seconds
