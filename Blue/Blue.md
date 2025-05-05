@@ -184,4 +184,4 @@ unset HISTFILE
 ## Summary/Understanding of what I've learned in this room
 - Learned how to exploit the EternalBlue vulnerability (MS17-010) on a vulnerable Windows 7 machine using Metasploit.
 - Even though the exploit grants SYSTEM immediately, upgrading to Meterpreter makes post-exploitation easier.
-- Extracted NTLM hashes and used John the Ripper for cracking.
+- If the box you are attacking has issues with being exploited, restarting it fixes these issues.
