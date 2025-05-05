@@ -1,38 +1,45 @@
 ![image](https://github.com/user-attachments/assets/4d83bdf8-48ad-4ec6-b7cb-dc142bbb4c2e)
 
-
 # TryHackMe Notes
 
-Welcome to my personal repository of TryHackMe notes. This collection is meant to help me track my learning progress, reinforce knowledge, and serve as a quick reference for challenges and rooms I've completed.
+Welcome to my personal repository of TryHackMe notes. This collection is designed to support a wide range of cybersecurity learning paths—from beginners just starting out to more advanced topics in ethical hacking, red teaming, and defensive operations. Each folder represents a room or challenge and includes key steps, tools used, and insights gained.
 
 ---
 
-## 🧰 Tools & Commands
+## 🧰 Tools & Techniques
 
-I use tools like `nmap`, `enum4linux`, `hydra`, and `metasploit`. You'll find snippets and common commands in each room's note file.
+Notes include examples and usage of tools across many categories:
+
+- **Recon & Scanning**: `nmap`, `rustscan`, `amass`, `whatweb`
+- **Enumeration**: `enum4linux`, `linpeas`, `smbclient`, `snmpwalk`
+- **Exploitation**: `metasploit`, manual exploits, public PoCs
+- **Web Hacking**: `gobuster`, `wfuzz`, `sqlmap`, `burpsuite`
+- **Privilege Escalation**: `linpeas`, `pspy`, manual misconfig review
+- **Reverse Engineering & Cracking**: `Ghidra`, `strings`, `gdb`, `john`
+- **OSINT & Forensics**: `theHarvester`, steganography tools, log analysis
+- **Post-Exploitation & Lateral Movement**: `mimikatz`, persistence scripts
 
 ---
 
 ## 📌 Goals
 
-- [x] Provide clear and concise walkthroughs for TryHackMe rooms.  
-- [x] Include commonly used commands and tools with examples.  
-- [x] Help beginners understand enumeration, exploitation, and privilege escalation techniques.  
-- [x] Serve as a quick reference during CTFs or revisiting concepts.  
-- [x] Maintain a clean, consistent format across all notes.  
-- [x] Share knowledge in a way that's easy to expand and contribute to.
+- [x] Cover a wide range of TryHackMe room categories (Linux, Windows, Web, OSINT, etc.)
+- [x] Explain enumeration, exploitation, and escalation steps in plain language
+- [x] Include screenshots, command outputs, and relevant flags
+- [x] Serve as a quick-reference playbook for CTF-style rooms
+- [x] Encourage good note-taking practices and reproducible walkthroughs
+- [x] Make it beginner-friendly while still useful to intermediate learners
 
 ---
 
 ## 📝 Usage
 
-Feel free to fork or use this repo as a template for your own TryHackMe notes. If you find anything useful or spot an error, you're welcome to submit a pull request or open an issue.
+Feel free to fork this repository or use it to build your own knowledge base. Notes are organized by room name, and some folders include additional artifacts like `.nmap` scans or custom scripts.
 
 ---
 
 ## 🔐 Disclaimer
 
-These notes are for educational purposes only. Do not use this knowledge for illegal or unethical activities.
+These notes are for educational and ethical purposes only. Do not apply these techniques on systems you do not own or have explicit permission to test.
 
 ---
-
