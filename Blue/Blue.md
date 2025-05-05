@@ -142,7 +142,7 @@ cat "c:\\Users\\Jon\\Documents\\flag3.txt"
 ```
 
 ### User Enumeration
-getuid
+getuid <br>
 ps
 
 ### File Discovery
