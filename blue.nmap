@@ -1,1 +1,0 @@
-# Nmap 7.94SVN scan initiated Sun May  4 12:54:16 2025 as: nmap -sVC -T4 -p- --open -oN blue.nmap 10.10.92.152
