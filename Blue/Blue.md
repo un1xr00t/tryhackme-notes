@@ -146,8 +146,8 @@ getuid
 ps
 
 ### File Discovery
-Flag 1 location: C:\flag1.txt
-Flag 2 location: c:\Windows\System32\config\flag2.txt
+Flag 1 location: C:\flag1.txt <br>
+Flag 2 location: c:\Windows\System32\config\flag2.txt <br>
 Flag 3 location: c:\Users\Jon\Documents\flag3.txt
 
 ---
